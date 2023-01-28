@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+
+ファイル名=main_activity_menu.xml
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto">
+ <item
+     android:id="@+id/action_settings"
+     android:orderInCategory="100"
+     app:showAsAction="never"
+     android:visible="false"
+     android:title=""/>
+
+ <item
+     android:id="@+id/menuAdd"
+     android:title=""
+     android:icon="@drawable/baseline_add_white_24dp"
+     app:showAsAction="always"/>
+
+ <item
+     android:id="@+id/menuSaveDone"
+     android:title=""
+     android:icon="@drawable/baseline_save_white_24dp"
+     android:visible="false"
+     android:titleCondensed="menuSaveDone"
+     app:showAsAction="always"/>
+
+ <item
+     android:id="@+id/menuDel"
+     android:title=""
+     android:icon="@drawable/baseline_delete_white_24dp"
+     android:visible="false"
+     app:showAsAction="always"/>
+
+ <item
+     android:id="@+id/menuDone"
+     android:title=""
+     android:icon="@drawable/outline_done_all_white_24dp"
+     android:visible="false"
+     app:showAsAction="always"/>
+
+ <item
+     android:id="@+id/menuBack"
+     android:title=""
+     android:icon="@drawable/outline_arrow_back_white_24dp"
+     android:visible="false"
+     app:showAsAction="always"/>
+
+ <item
+     android:id="@+id/menuBrowser"
+     android:title=""
+     android:icon="@drawable/baseline_open_in_browser_white_24dp"
+     android:visible="false"
+     app:showAsAction="always"/>
+
+
+</menu>

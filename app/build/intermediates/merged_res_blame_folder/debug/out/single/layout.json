@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "local.hal.st31.android.itarticlecollection00567.app-mergeDebugResources-30:/layout/activity_article_detail.xml",
+        "source": "local.hal.st31.android.itarticlecollection00567.app-main-33:/layout/activity_article_detail.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-mergeDebugResources-30:/layout/activity_article_detail.xml",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/layout/activity_article_detail.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-mergeDebugResources-30:/layout/activity_article_add.xml",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/layout/activity_article_add.xml"
+    }
+]
