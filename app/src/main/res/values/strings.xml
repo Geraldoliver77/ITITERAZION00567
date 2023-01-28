@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">共有IT記事</string>
+    <string name="tv_name">名前を入力して下さい。</string>
+
+    <string name="tv_title_list">URLリスト</string>
+
+    <string name="bt_send">送信</string>
+    <string name="bt_clear">クリア</string>
+    <string name="toast_msg">タイトル、URL、性、名、学籍番号、出席番号を入力してください。</string>
+    <string name="msg_sending">送信中…</string>
+    <string name="msg_name">名前: </string>
+    <string name="msg_comment">コメント: </string>
+
+    <string name="msg_err_send">サーバ通信に失敗しました。もう一度送信をお願いします。</string>
+    <string name="msg_err_timeout">サーバ通信がタイムアウトしました。もう一度送信をお願いします。</string>
+    <string name="msg_err_parse">サーバからの返信内容の解析に失敗しました。もう一度送信をお願いします。</string>
+    <string name="msg_err_test">データ解析失敗でした！タイトルに”ほげ”が含まれています。</string>
+
+    <string name="msg_input_title">項目追加されました！</string>
+
+    <string name="title">記事タイトル:</string>
+    <string name="url">記事のURL：</string>
+    <string name="comment">記事へのコメント:</string>
+
+    <string name="last_name">性:</string>
+    <string name="first_name">名:</string>
+    <string name="student_id">学籍番号:</string>
+    <string name="seat_no">出席番号:</string>
+
+    <string name="btn_dialog_positive">確認</string>
+
+    <string name="tv_main">記事詳細</string>
+
+</resources>
