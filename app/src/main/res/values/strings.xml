@@ -6,7 +6,7 @@
 
     <string name="bt_send">送信</string>
     <string name="bt_clear">クリア</string>
-    <string name="toast_msg">タイトル、URL、性、名、学籍番号、出席番号を入力してください。</string>
+    <string name="toast_msg">タイトル、URL、コメントを入力してください。</string>
     <string name="msg_sending">送信中…</string>
     <string name="msg_name">名前: </string>
     <string name="msg_comment">コメント: </string>

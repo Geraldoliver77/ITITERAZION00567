@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
                         first_name = listContent.getString("first_name");
                         createdAt = listContent.getString("created_at");
 
-                        String showToDisplay = title + "\n" + last_name +" " + first_name;
+                        String showToDisplay = title + "\n" + "\n" + last_name +" " + first_name;
                         userInfoList.add(showToDisplay);
                         userId.add(id);
 

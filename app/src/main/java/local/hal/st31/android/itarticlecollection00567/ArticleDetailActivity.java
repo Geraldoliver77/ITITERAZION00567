@@ -58,6 +58,9 @@ public class ArticleDetailActivity extends AppCompatActivity {
 
     private String urls = "";
 
+
+
+
     /**
      * モデルクラス。
      */

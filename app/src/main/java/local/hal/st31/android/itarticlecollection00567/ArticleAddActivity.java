@@ -40,7 +40,7 @@ import java.util.concurrent.Executors;
 
 /**
  * ST31 評定課題 ITARTICLECOLLECTION
- *
+ * <p>
  * ArticleAddActivityクラス
  *
  * @author Gerald Oliver
@@ -103,42 +103,38 @@ public class ArticleAddActivity extends AppCompatActivity {
         boolean returnVal = true;
         int itemId = item.getItemId();
 
-        TextView lastName = findViewById(R.id.lastName);
-        EditText etLastName = findViewById(R.id.etLastName);
-
-        TextView firstName = findViewById(R.id.firstName);
-        EditText etFirstName = findViewById(R.id.etFirstName);
-
-        TextView studentId = findViewById(R.id.studentId);
-        EditText etStudentId = findViewById(R.id.etStudentId);
-
-        TextView seatNo = findViewById(R.id.seatNo);
-        EditText etSeatNo = findViewById(R.id.etSeatNo);
-
-        Button button = findViewById(R.id.btSend);
-
-
         switch (itemId) {
 
             case R.id.menuSaveDone:
-                Toast.makeText(ArticleAddActivity.this, R.string.msg_input_title, Toast.LENGTH_SHORT).show();
 
-                lastName.setVisibility(View.VISIBLE);
-                etLastName.setVisibility(View.VISIBLE);
+                EditText etTitle = findViewById(R.id.etTitle);
+                EditText etUrl = findViewById(R.id.etUrl);
+                EditText etMessage = findViewById(R.id.etComment);
 
-                firstName.setVisibility(View.VISIBLE);
-                etFirstName.setVisibility(View.VISIBLE);
+//                Toast.makeText(ArticleAddActivity.this, R.string.msg_input_title, Toast.LENGTH_SHORT).show();
 
-                studentId.setVisibility(View.VISIBLE);
-                etStudentId.setVisibility(View.VISIBLE);
+                String title = etTitle.getText().toString();
+                String inputUrl = etUrl.getText().toString();
+                String msg = etMessage.getText().toString();
 
-                seatNo.setVisibility(View.VISIBLE);
-                etSeatNo.setVisibility(View.VISIBLE);
+                String firstName = "Gerald";
+                String lastName = "Oliver";
+                String studentId = "00567";
+                String seatNo = "12";
 
-                button.setVisibility(View.VISIBLE);
+
+                if (msg.length() < 1) {
+                    msg = "";
+                }
+
+                if (!title.equals("") && !inputUrl.equals("") && !msg.equals("")) {
+                    sendPostData(ACCESS_URL, title, inputUrl, msg, lastName, firstName, studentId, seatNo);
+                } else {
+                    Toast.makeText(ArticleAddActivity.this, R.string.toast_msg,
+                            Toast.LENGTH_SHORT).show();
+                }
 
                 break;
-
 
             case android.R.id.home:
                 Intent i = new Intent(ArticleAddActivity.this, MainActivity.class);
@@ -155,44 +151,6 @@ public class ArticleAddActivity extends AppCompatActivity {
         return returnVal;
     }
 
-    /**
-     * 送信ボタンがクリックしたときの処理メソッド。
-     *
-     * @param view Viewオブジェクト。
-     */
-    public void onSendButtonClick(View view) {
-
-        EditText etTitle = findViewById(R.id.etTitle);
-        EditText etUrl = findViewById(R.id.etUrl);
-        EditText etMessage = findViewById(R.id.etComment);
-        EditText etLastName = findViewById(R.id.etLastName);
-        EditText etFirstName = findViewById(R.id.etFirstName);
-        EditText etStudentId = findViewById(R.id.etStudentId);
-        EditText etSeatNo = findViewById(R.id.etSeatNo);
-
-        String title = etTitle.getText().toString();
-        String inputUrl = etUrl.getText().toString();
-        String msg = etMessage.getText().toString();
-
-        String lastName = etLastName.getText().toString();
-        String firstName = etFirstName.getText().toString();
-        String studentId = etStudentId.getText().toString();
-        String seatNo = etSeatNo.getText().toString();
-
-
-        if (msg.length() < 1) {
-            msg = "";
-        }
-
-
-        if (!lastName.equals("") && !firstName.equals("") && !studentId.equals("") && !seatNo.equals("") && !title.equals("") && !inputUrl.equals("")) {
-            sendPostData(ACCESS_URL, title, inputUrl, msg, lastName, firstName, studentId, seatNo);
-        } else {
-            Toast.makeText(ArticleAddActivity.this, R.string.toast_msg,
-                    Toast.LENGTH_SHORT).show();
-        }
-
-    }
 
     /**
      * データを送信するクラス
@@ -229,18 +187,16 @@ public class ArticleAddActivity extends AppCompatActivity {
 
         private final String _msg;
 
-        private final String _lastName;
-
-        private final String _firstName;
-
-        private final String _studentId;
-
-        private final String _seatNo;
+        private String _firstName = "Gerald";
+        private String _lastName = "Oliver";
+        private String _studentId = "00567";
+        private String _seatNo = "12";
 
         /**
          * コンストラクタ。
          * 非同期でサーバにポストするのに必要な情報を取得する。
-         *  @param handler   ハンドラオブジェクト。
+         *
+         * @param handler   ハンドラオブジェクト。
          * @param url       ポスト先URL。
          * @param title
          * @param inputUrl
@@ -250,7 +206,7 @@ public class ArticleAddActivity extends AppCompatActivity {
          * @param seatNo    学生の出席番号
          * @param msg       先生にコメント
          */
-        public BackgroundExecutor(Handler handler, String url, String title, String inputUrl, String msg , String lastName, String firstName, String studentId, String seatNo) {
+        public BackgroundExecutor(Handler handler, String url, String title, String inputUrl, String msg, String lastName, String firstName, String studentId, String seatNo) {
             _handler = handler;
             _url = url;
             _title = title;
@@ -277,13 +233,13 @@ public class ArticleAddActivity extends AppCompatActivity {
             String title = "";
 
             String postData =
-                            "title=" + _title
+                    "title=" + _title
                             + "&url=" + _inputUrl
                             + "&comment=" + _msg
-                    + "&lastname=" + _lastName
-                    + "&firstname=" + _firstName
-                    + "&studentid=" + _studentId
-                    + "&seatno=" + _seatNo;
+                            + "&lastname=" + _lastName
+                            + "&firstname=" + _firstName
+                            + "&studentid=" + _studentId
+                            + "&seatno=" + _seatNo;
 
             HttpURLConnection con = null;
             InputStream is = null;
@@ -332,19 +288,19 @@ public class ArticleAddActivity extends AppCompatActivity {
                 progressUpdateExecutor = new ProgressUpdateExecutor(3);
                 _handler.post(progressUpdateExecutor);
             } catch (SocketTimeoutException ex) {
-                flag= 1;
+                flag = 1;
                 result = getString(R.string.msg_err_timeout);
                 Log.e(DEBUG_TAG, "タイムアウト", ex);
             } catch (MalformedURLException ex) {
-                flag= 1;
+                flag = 1;
                 result = getString(R.string.msg_err_send);
                 Log.e(DEBUG_TAG, "URL変換失敗", ex);
             } catch (IOException ex) {
-                flag= 1;
+                flag = 1;
                 result = getString(R.string.msg_err_send);
                 Log.e(DEBUG_TAG, "通信失敗", ex);
             } catch (JSONException e) {
-                flag= 1;
+                flag = 1;
                 e.printStackTrace();
             } finally {
                 if (con != null) {
@@ -362,7 +318,7 @@ public class ArticleAddActivity extends AppCompatActivity {
 
 
             if (flag == 0 && !title.equals("ほげ")) {
-                ItArticleDAO.insert(db, _title, _inputUrl, _msg, _lastName, _firstName, _studentId, _seatNo , timestamp);
+                ItArticleDAO.insert(db, _title, _inputUrl, _msg, _lastName, _firstName, _studentId, _seatNo, timestamp);
             }
 
 
@@ -474,8 +430,7 @@ public class ArticleAddActivity extends AppCompatActivity {
                     message = getString(R.string.msg_err_parse);
                     Log.e(DEBUG_TAG, "JSON解析失敗", ex);
                 }
-                    message = msg;
-
+                message = msg;
 
 
                 ItDialog dialog = new ItDialog();
@@ -486,17 +441,18 @@ public class ArticleAddActivity extends AppCompatActivity {
                 dialog.setArguments(extras);
                 dialog.show(manager, "ItDialog");
 
-                Intent i = new Intent(ArticleAddActivity.this, MainActivity.class);
+                if (msg.equals("データ登録が完了しました。")) {
+                    Intent i = new Intent(ArticleAddActivity.this, MainActivity.class);
 
-                Bundle bundle = new Bundle();
-                bundle.putString("msg", message);
-                i.putExtras(bundle);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("msg", message);
+                    i.putExtras(bundle);
 
-                overridePendingTransition(R.anim.from_left_in, R.anim.from_right_out);
-                startActivity(i);
-                overridePendingTransition(R.anim.from_left_in, R.anim.from_right_out);
-                finish();
-
+                    overridePendingTransition(R.anim.from_left_in, R.anim.from_right_out);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.from_left_in, R.anim.from_right_out);
+                    finish();
+                }
 
             }
 

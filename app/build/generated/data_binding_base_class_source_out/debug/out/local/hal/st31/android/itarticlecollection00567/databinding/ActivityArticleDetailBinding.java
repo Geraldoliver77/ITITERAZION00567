@@ -4,6 +4,7 @@ package local.hal.st31.android.itarticlecollection00567.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +25,9 @@ public final class ActivityArticleDetailBinding implements ViewBinding {
 
   @NonNull
   public final TextView createdText;
+
+  @NonNull
+  public final ScrollView horizontalScrollView;
 
   @NonNull
   public final TextView idText;
@@ -47,12 +51,14 @@ public final class ActivityArticleDetailBinding implements ViewBinding {
   public final TextView urlText;
 
   private ActivityArticleDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView commentText, @NonNull TextView createdText, @NonNull TextView idText,
+      @NonNull TextView commentText, @NonNull TextView createdText,
+      @NonNull ScrollView horizontalScrollView, @NonNull TextView idText,
       @NonNull TextView nameText, @NonNull TextView seatText, @NonNull TextView studentIdText,
       @NonNull TextView titleText, @NonNull TextView tvTitleEdit, @NonNull TextView urlText) {
     this.rootView = rootView;
     this.commentText = commentText;
     this.createdText = createdText;
+    this.horizontalScrollView = horizontalScrollView;
     this.idText = idText;
     this.nameText = nameText;
     this.seatText = seatText;
@@ -101,6 +107,12 @@ public final class ActivityArticleDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.horizontalScrollView;
+      ScrollView horizontalScrollView = ViewBindings.findChildViewById(rootView, id);
+      if (horizontalScrollView == null) {
+        break missingId;
+      }
+
       id = R.id.idText;
       TextView idText = ViewBindings.findChildViewById(rootView, id);
       if (idText == null) {
@@ -144,7 +156,8 @@ public final class ActivityArticleDetailBinding implements ViewBinding {
       }
 
       return new ActivityArticleDetailBinding((ConstraintLayout) rootView, commentText, createdText,
-          idText, nameText, seatText, studentIdText, titleText, tvTitleEdit, urlText);
+          horizontalScrollView, idText, nameText, seatText, studentIdText, titleText, tvTitleEdit,
+          urlText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

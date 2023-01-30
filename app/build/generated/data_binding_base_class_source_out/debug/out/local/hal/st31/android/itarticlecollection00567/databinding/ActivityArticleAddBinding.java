@@ -4,7 +4,6 @@ package local.hal.st31.android.itarticlecollection00567.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,25 +21,10 @@ public final class ActivityArticleAddBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btSend;
-
-  @NonNull
   public final TextView comment;
 
   @NonNull
   public final EditText etComment;
-
-  @NonNull
-  public final EditText etFirstName;
-
-  @NonNull
-  public final EditText etLastName;
-
-  @NonNull
-  public final EditText etSeatNo;
-
-  @NonNull
-  public final EditText etStudentId;
 
   @NonNull
   public final EditText etTitle;
@@ -49,43 +33,19 @@ public final class ActivityArticleAddBinding implements ViewBinding {
   public final EditText etUrl;
 
   @NonNull
-  public final TextView firstName;
-
-  @NonNull
-  public final TextView lastName;
-
-  @NonNull
-  public final TextView seatNo;
-
-  @NonNull
-  public final TextView studentId;
-
-  @NonNull
   public final TextView title;
 
   @NonNull
   public final TextView url;
 
-  private ActivityArticleAddBinding(@NonNull ConstraintLayout rootView, @NonNull Button btSend,
-      @NonNull TextView comment, @NonNull EditText etComment, @NonNull EditText etFirstName,
-      @NonNull EditText etLastName, @NonNull EditText etSeatNo, @NonNull EditText etStudentId,
-      @NonNull EditText etTitle, @NonNull EditText etUrl, @NonNull TextView firstName,
-      @NonNull TextView lastName, @NonNull TextView seatNo, @NonNull TextView studentId,
+  private ActivityArticleAddBinding(@NonNull ConstraintLayout rootView, @NonNull TextView comment,
+      @NonNull EditText etComment, @NonNull EditText etTitle, @NonNull EditText etUrl,
       @NonNull TextView title, @NonNull TextView url) {
     this.rootView = rootView;
-    this.btSend = btSend;
     this.comment = comment;
     this.etComment = etComment;
-    this.etFirstName = etFirstName;
-    this.etLastName = etLastName;
-    this.etSeatNo = etSeatNo;
-    this.etStudentId = etStudentId;
     this.etTitle = etTitle;
     this.etUrl = etUrl;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.seatNo = seatNo;
-    this.studentId = studentId;
     this.title = title;
     this.url = url;
   }
@@ -117,12 +77,6 @@ public final class ActivityArticleAddBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btSend;
-      Button btSend = ViewBindings.findChildViewById(rootView, id);
-      if (btSend == null) {
-        break missingId;
-      }
-
       id = R.id.comment;
       TextView comment = ViewBindings.findChildViewById(rootView, id);
       if (comment == null) {
@@ -132,30 +86,6 @@ public final class ActivityArticleAddBinding implements ViewBinding {
       id = R.id.etComment;
       EditText etComment = ViewBindings.findChildViewById(rootView, id);
       if (etComment == null) {
-        break missingId;
-      }
-
-      id = R.id.etFirstName;
-      EditText etFirstName = ViewBindings.findChildViewById(rootView, id);
-      if (etFirstName == null) {
-        break missingId;
-      }
-
-      id = R.id.etLastName;
-      EditText etLastName = ViewBindings.findChildViewById(rootView, id);
-      if (etLastName == null) {
-        break missingId;
-      }
-
-      id = R.id.etSeatNo;
-      EditText etSeatNo = ViewBindings.findChildViewById(rootView, id);
-      if (etSeatNo == null) {
-        break missingId;
-      }
-
-      id = R.id.etStudentId;
-      EditText etStudentId = ViewBindings.findChildViewById(rootView, id);
-      if (etStudentId == null) {
         break missingId;
       }
 
@@ -171,30 +101,6 @@ public final class ActivityArticleAddBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.firstName;
-      TextView firstName = ViewBindings.findChildViewById(rootView, id);
-      if (firstName == null) {
-        break missingId;
-      }
-
-      id = R.id.lastName;
-      TextView lastName = ViewBindings.findChildViewById(rootView, id);
-      if (lastName == null) {
-        break missingId;
-      }
-
-      id = R.id.seatNo;
-      TextView seatNo = ViewBindings.findChildViewById(rootView, id);
-      if (seatNo == null) {
-        break missingId;
-      }
-
-      id = R.id.studentId;
-      TextView studentId = ViewBindings.findChildViewById(rootView, id);
-      if (studentId == null) {
-        break missingId;
-      }
-
       id = R.id.title;
       TextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
@@ -207,9 +113,8 @@ public final class ActivityArticleAddBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityArticleAddBinding((ConstraintLayout) rootView, btSend, comment, etComment,
-          etFirstName, etLastName, etSeatNo, etStudentId, etTitle, etUrl, firstName, lastName,
-          seatNo, studentId, title, url);
+      return new ActivityArticleAddBinding((ConstraintLayout) rootView, comment, etComment, etTitle,
+          etUrl, title, url);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

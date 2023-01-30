@@ -25,7 +25,7 @@
     <string name="seat_no">出席番号:</string>
     <string name="student_id">学籍番号:</string>
     <string name="title">記事タイトル:</string>
-    <string name="toast_msg">タイトル、URL、性、名、学籍番号、出席番号を入力してください。</string>
+    <string name="toast_msg">タイトル、URL、コメントを入力してください。</string>
     <string name="tv_main">記事詳細</string>
     <string name="tv_name">名前を入力して下さい。</string>
     <string name="tv_title_list">URLリスト</string>

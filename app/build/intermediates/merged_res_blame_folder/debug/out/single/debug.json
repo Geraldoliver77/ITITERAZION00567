@@ -32,6 +32,14 @@
         "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/anim_from_right_out.xml.flat",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/anim/from_right_out.xml"
+    },
+    {
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/anim_from_left_in.xml.flat",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/anim/from_left_in.xml"
+    },
+    {
         "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
     },
@@ -50,10 +58,6 @@
     {
         "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/layout_activity_article_detail.xml.flat",
         "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/layout/activity_article_detail.xml"
-    },
-    {
-        "merged": "local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/anim_from_left_in.xml.flat",
-        "source": "local.hal.st31.android.itarticlecollection00567.app-main-33:/anim/from_left_in.xml"
     },
     {
         "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -88,28 +92,24 @@
         "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/baseline_open_in_browser_white_24dp.png"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_baseline_add_white_24dp.png.flat",
         "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/baseline_add_white_24dp.png"
     },
     {
-        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_baseline_save_black_24dp.png.flat",
-        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/baseline_save_black_24dp.png"
-    },
-    {
-        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_outline_done_all_white_24dp.png.flat",
-        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/outline_done_all_white_24dp.png"
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_outline_arrow_back_white_24dp.png.flat",
         "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/outline_arrow_back_white_24dp.png"
     },
     {
-        "merged": "local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/anim_from_right_out.xml.flat",
-        "source": "local.hal.st31.android.itarticlecollection00567.app-main-33:/anim/from_right_out.xml"
+        "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/drawable-v24_outline_done_all_white_24dp.png.flat",
+        "source": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-main-33:/drawable-v24/outline_done_all_white_24dp.png"
+    },
+    {
+        "merged": "local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/layout_activity_article_detail.xml.flat",
+        "source": "local.hal.st31.android.itarticlecollection00567.app-main-33:/layout/activity_article_detail.xml"
     },
     {
         "merged": "/Users/user/.gradle/daemon/7.4/local.hal.st31.android.itarticlecollection00567.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
